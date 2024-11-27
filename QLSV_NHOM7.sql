@@ -1,11 +1,4 @@
-﻿/*================================================
-	Họ tên thành viên:	Phạm Nguyễn Thế Anh.
-	MSSV:				2033220108.
-	Họ tên thành viên:	Đỗ Trung Dũng.
-	MSSV:				2033220680.
-	LAB: 03 - NHÓM: 7.
-	NGÀY: 26/09/2024.
-==================================================*/
+
 --ALTER DATABASE QUANLYSINHVIEN SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
 CREATE DATABASE QUANLYSINHVIEN;
 GO
@@ -17,17 +10,6 @@ ALTER DATABASE QUANLYSINHVIEN
 SET COMPATIBILITY_LEVEL = 120;
 GO
 
-
-
-
-/*================================================
-	Họ tên thành viên:	Phạm Nguyễn Thế Anh.
-	MSSV:				2033220108.
-	Họ tên thành viên:	Đỗ Trung Dũng.
-	MSSV:				2033220680.
-	LAB: 03 - NHÓM: 7.
-	NGÀY: 26/09/2024.
-==================================================*/
 
 CREATE TABLE NHANVIEN (
     MANV VARCHAR(20) PRIMARY KEY,
@@ -82,16 +64,6 @@ CREATE TABLE BANGDIEM (
 );
 GO
 
-/*================================================
-	Họ tên thành viên:	Phạm Nguyễn Thế Anh.
-	MSSV:				2033220108.
-	Họ tên thành viên:	Đỗ Trung Dũng.
-	MSSV:				2033220680.
-	LAB: 03 - NHÓM: 7.
-	NGÀY: 26/09/2024.
-==================================================*/
---Câu C
---i
 CREATE PROCEDURE SP_INS_PUBLIC_NHANVIEN
     @MANV VARCHAR(20),
     @HOTEN NVARCHAR(100),
@@ -172,16 +144,6 @@ GO
 EXEC SP_SEL_PUBLIC_NHANVIEN 'NVB', '12abcd';
 GO
 
-/*================================================
-	Họ tên thành viên:	Phạm Nguyễn Thế Anh.
-	MSSV:				2033220108.
-	Họ tên thành viên:	Đỗ Trung Dũng.
-	MSSV:				2033220680.
-	LAB: 03 - NHÓM: 7.
-	NGÀY: 26/09/2024.
-==================================================*/
---Câu D
-/*
 INSERT INTO NHANVIEN (MANV, HOTEN, EMAIL, LUONG, TENDN, MATKHAU, PUBKEY)
 VALUES 
     ('NV01', 'NGUYEN VAN A', 'nva@yahoo.com', CONVERT(VARBINARY(MAX), '3000000'), 'NVA', '123456', 'NV01'),
@@ -191,16 +153,7 @@ GO
 SELECT * FROM NHANVIEN;
 SELECT * FROM LOP;
 SELECT * FROM SINHVIEN;
-*/
 
-/*================================================
-	Họ tên thành viên:	Phạm Nguyễn Thế Anh.
-	MSSV:				2033220108.
-	Họ tên thành viên:	Đỗ Trung Dũng.
-	MSSV:				2033220680.
-	LAB: 03 - NHÓM: 7.
-	NGÀY: 26/09/2024.
-==================================================*/
 
 /* Procedure Đăng Nhập */
 CREATE PROCEDURE SP_LOGIN_NV
@@ -234,7 +187,6 @@ GO
 EXEC SP_LOGIN_NV 'NVA', 'abcd12';
 GO
 
---======================================--
 -- Procedure Quản Lý Lớp
 CREATE PROCEDURE SP_INSERT_LOP
     @MALOP VARCHAR(20),
